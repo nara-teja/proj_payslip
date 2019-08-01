@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public class Program {
 
+    public static boolean checkBetween(int tester, int floor, int ceiling)
+    {
+        return((tester > floor) && (tester < ceiling));
+    }
+
     public static String StringInput()
     {
         Scanner Read = new Scanner(System.in);
@@ -36,13 +41,17 @@ public class Program {
 
         String Checker = Input.split(" ")[1].toUpperCase();
         Integer Day = Integer.parseInt(Input.split(" ")[0]);
+        System.out.println(Day);
 
-        if ((Checker.equals("FEBRUARY") || Checker.equals("MARCH") || Checker.equals("MAY") || Checker.equals("JULY") || Checker.equals("AUGUST") || Checker.equals("OCTOBER") || Checker.equals("DECEMBER")
-            || Checker.equals("APRIL") || Checker.equals("JUNE") || Checker.equals("SEPTEMBER") || Checker.equals("NOVEMBER") || Checker.equals("JANUARY")
-                && (Day > 0 && Day < 32)))
+        if (Checker.equals("FEBRUARY") || Checker.equals("MARCH") || Checker.equals("MAY") || Checker.equals("JULY") || Checker.equals("AUGUST") || Checker.equals("OCTOBER") || Checker.equals("DECEMBER")
+            || Checker.equals("APRIL") || Checker.equals("JUNE") || Checker.equals("SEPTEMBER") || Checker.equals("NOVEMBER") || Checker.equals("JANUARY"))
             {
-                return Input;
+                if(checkBetween(Day, 0, 32))
+                {
+                    return Input;
+                }
             }
+        System.out.println("Error! Incorrect input, try again!");
         return MonthInput();
     }
 
