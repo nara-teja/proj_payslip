@@ -37,9 +37,9 @@ public class Program {
         String Checker = Input.split(" ")[1].toUpperCase();
         Integer Day = Integer.parseInt(Input.split(" ")[0]);
 
-        if ((Checker == "FEBRUARY" || Checker == "MARCH" || Checker == "MAY" || Checker == "JULY" || Checker == "AUGUST" || Checker == "OCTOBER" || Checker == "DECEMBER"
-            || Checker == "APRIL" || Checker == "JUNE" || Checker == "SEPTEMBER" || Checker == "NOVEMBER" || Checker == "JANUARY")
-                && (Day > 0 && Day < 32))
+        if ((Checker.equals("FEBRUARY") || Checker.equals("MARCH") || Checker.equals("MAY") || Checker.equals("JULY") || Checker.equals("AUGUST") || Checker.equals("OCTOBER") || Checker.equals("DECEMBER")
+            || Checker.equals("APRIL") || Checker.equals("JUNE") || Checker.equals("SEPTEMBER") || Checker.equals("NOVEMBER") || Checker.equals("JANUARY")
+                && (Day > 0 && Day < 32)))
             {
                 return Input;
             }

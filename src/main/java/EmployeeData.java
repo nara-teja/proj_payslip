@@ -68,12 +68,12 @@ class EmployeeData {
     {
         String Checker = getStartDate().split(" ")[1].toUpperCase();
         String Month = getStartDate().split(" ")[1];
-        if(Checker == "FEBRUARY" || Checker == "MARCH" || Checker == "MAY" || Checker == "JULY"
-                || Checker == "AUGUST" || Checker == "OCTOBER" || Checker == "DECEMBER")
+        if(Checker.equals("FEBRUARY") || Checker.equals("MARCH") || Checker.equals("MAY") || Checker.equals("JULY")
+                || Checker.equals("AUGUST") || Checker.equals("OCTOBER") || Checker.equals("DECEMBER"))
         {
             return "01 " + Month + " - 31 " + Month;
         }
-        if(Checker == "APRIL" || Checker == "JUNE" || Checker == "SEPTEMBER" || Checker == "NOVEMBER")
+        if(Checker.equals("APRIL") || Checker.equals("JUNE") || Checker.equals("SEPTEMBER") || Checker.equals("NOVEMBER"))
         {
             return "01 " + Month + " - 30 " + Month;
         }
