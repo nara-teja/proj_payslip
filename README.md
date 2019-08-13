@@ -1,10 +1,5 @@
 # Payslip Kata
-
-At MYOB we rock at payroll, the most important part of payroll is getting your payslip!
-
-In this code kata, we have several levels of difficulty.
-
-## The payslip rules
+## Payslip Rules
 
 * Pay period = per calendar month   
 * Gross income = annual salary / 12 months   
